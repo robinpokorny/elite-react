@@ -2,10 +2,9 @@
   "name": "elite-react",
   "version": "0.1.0",
   "authors": [
-    "Robin Pokorný <robin@medvedi.eu>"
+    "Robin Pokorný <me@robinpokorny.com>"
   ],
   "private": true,
   "dependencies": {
-    "react": "~0.12.0"
   }
 }

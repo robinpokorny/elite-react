@@ -3,11 +3,55 @@
 <head lang="cs">
     <meta charset="UTF-8">
     <title>Elite demo</title>
-    <script src="bower_components/react/react.js"></script>
-    <script src="bower_components/react/JSXTransformer.js"></script>
 </head>
 <body>
-    <div id="elite"></div>
-    <script src="elite.js" type="text/jsx"></script>
+    <div id="elite">Loading…</div>
+    <script id="data" type="application/json">
+        {
+            "elite": [
+                {
+                    "id": 899,
+                    "name": "\u010cesk\u00e1 televize",
+                    "image": "http:\/\/presentation.lmc.cz\/loga\/ceskatelevize\/elita\/logo.gif",
+                    "officeImage": "http:\/\/presentation.lmc.cz\/loga\/ceskatelevize\/elita\/foto.gif",
+                    "url": "http:\/\/access.lmc.cz\/redir.php?Evertical=0&Eelita=899&url=http%3A%2F%2Fceskatelevize.jobs.cz%2F%3Frps%3D27",
+                    "mobileUrl": "",
+                    "displayUrl": "http:\/\/ceskatelevize.jobs.cz\/",
+                    "adCount": 18,
+                    "g2Id": "1748450",
+                    "branchesIds": [""],
+                    "shortDisplayUrl": "ceskatelevize.jobs.cz"
+                },
+                {
+                    "id": 52,
+                    "name": "Vodafone",
+                    "image": "http:\/\/presentation.lmc.cz\/loga\/vodafone\/elita\/logo.gif",
+                    "officeImage": "http:\/\/presentation.lmc.cz\/loga\/vodafone\/elita\/foto.gif",
+                    "url": "http:\/\/access.lmc.cz\/redir.php?Evertical=0&Eelita=52&url=http%3A%2F%2Fvodafone.jobs.cz%2F%3Frps%3D27",
+                    "mobileUrl": "",
+                    "displayUrl": "http:\/\/vodafone.jobs.cz\/",
+                    "adCount": 32,
+                    "g2Id": "5411",
+                    "branchesIds": [""],
+                    "shortDisplayUrl": "vodafone.jobs.cz"
+                },
+                {
+                    "id": 53,
+                    "name": "\u010cesk\u00e1 spo\u0159itelna",
+                    "image": "http:\/\/presentation.lmc.cz\/loga\/csas\/elita\/logo.gif",
+                    "officeImage": "http:\/\/presentation.lmc.cz\/loga\/bosch\/elita\/foto.gif",
+                    "url": "http:\/\/access.lmc.cz\/redir.php?Evertical=0&Eelita=53&url=http%3A%2F%2Fcsas.jobs.cz%2F%3Frps%3D27",
+                    "mobileUrl": "",
+                    "displayUrl": "http:\/\/csas.jobs.cz\/",
+                    "adCount": 145,
+                    "g2Id": "175350",
+                    "branchesIds": [""],
+                    "shortDisplayUrl": "csas.jobs.cz"
+                }
+            ]
+        }
+    </script>
+
+    <script src="dist/app.js"></script>
 </body>
 </html>
