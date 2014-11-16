@@ -9,12 +9,14 @@ module.exports = React.createClass({
   },
   render: function() {
     return (
-      <li>
-        <a href={this.props.company.url} onMouseOver={this.handleClick}>
-          {this.props.company.name}
-        </a>
-      &nbsp;({this.props.company.adCount})
-      </li>
+      <div className="grid__item e-4--palm e-5 e-push-1--desk">
+        <div className="index-card">
+          <a href={this.props.company.url} onMouseOver={this.handleClick}>
+            {this.props.company.name}
+          </a>
+          &nbsp;({this.props.company.adCount})
+        </div>
+      </div>
     );
   }
 });
