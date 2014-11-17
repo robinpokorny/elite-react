@@ -1,5 +1,3 @@
-/** @jsx React.DOM */
-
 var React = require('react');
 var EliteDetail = require('./detail');
 var EliteCard = require('./card');

@@ -1,9 +1,14 @@
-/** @jsx React.DOM */
-
 var React = require('react');
 
 module.exports = React.createClass({
   render: function() {
+    var vacanciesInfo = <p>&nbsp;</p>;
+    if (this.props.company.adCount) {
+      vacanciesInfo = <p>
+        <strong>{this.props.company.adCount}</strong>
+        &nbsp;volných pozic
+      </p>
+    }
     return (
       <div className="title__elite text--center">
         <a href={this.props.company.url}>
@@ -12,10 +17,7 @@ module.exports = React.createClass({
         <a href={this.props.company.url}>
           <img className="title__elite__preview" src={this.props.company.officeImage}/>
         </a>
-        <p>
-          <strong>{this.props.company.adCount}</strong>
-        &nbsp;volných pozic
-        </p>
+        {vacanciesInfo}
         <a href={this.props.company.url}>{this.props.company.displayUrl}</a>
       </div>
     );
