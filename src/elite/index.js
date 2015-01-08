@@ -1,25 +1,33 @@
-var React = require('react');
 var EliteDetail = require('./detail');
 var EliteCard = require('./card');
+
+var React = require('react');
+
+var EliteStore = require('../stores/EliteStore');
 
 module.exports = React.createClass({
   getInitialState: function() {
     return {
-      currentDetail: 0
+      currentDetail: 0,
+      companies: EliteStore.getAll()
     };
   },
-  handleSwitch: function(position){
-    this.setState({currentDetail: position});
+  componentDidMount: function() {
+    EliteStore.addChangeListener(this._onChange);
+  },
+
+  componentWillUnmount: function() {
+    EliteStore.removeChangeListener(this._onChange);
   },
   render: function () {
     return (
       <div className="grid">
         <div className="grid__item e-6--palm e-push-1--palm e-push-0 e-7--desk">
-          <EliteDetail company={this.props.companies[this.state.currentDetail]} />
+          <EliteDetail company={this.state.companies[this.state.currentDetail]} />
         </div>
         <div className="grid__item e-10 e-18--desk">
           <div className="grid grid--middle">
-            {this.props.companies.map(function (company, index) {
+            {this.state.companies.map(function (company, index) {
               return <EliteCard
                 company={company}
                 key={"company-" + company.id}
@@ -36,5 +44,13 @@ module.exports = React.createClass({
         </div>
       </div>
     );
+  },
+  handleSwitch: function(position){
+    this.setState({currentDetail: position});
+  },
+  _onChange: function() {
+    this.setState({
+      companies: EliteStore.getAll()
+    });
   }
 });

@@ -1,8 +1,9 @@
 var React = require('react');
 var Elite = require('./elite/index');
-
-var DATA = JSON.parse(document.getElementById('data').innerHTML);
+var EliteLoad = require('./actions/EliteLoad');
 
 React.initializeTouchEvents(true);
 
-React.render(<Elite companies={DATA.elite} />, document.getElementById('elite'));
+React.render(<Elite />, document.getElementById('elite'));
+
+EliteLoad.load();

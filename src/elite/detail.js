@@ -2,6 +2,9 @@ var React = require('react');
 
 module.exports = React.createClass({
   render: function() {
+    if (!this.props.company) {
+      return <div />;
+    }
     var vacanciesInfo = <p>&nbsp;</p>;
     if (this.props.company.adCount) {
       vacanciesInfo = <p>
