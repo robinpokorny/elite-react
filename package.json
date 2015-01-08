@@ -1,27 +1,30 @@
 {
   "name": "elite-react",
   "version": "0.2.0",
-  "scripts": {
-    "test": "jest"
-  },
+  "main": "src/app.js",
   "author": "Robin Pokorný <me@robinpokorny.com>",
   "dependencies": {
-    "debowerify": "^0.9.1",
     "flux": "^2.0.1",
-    "grunt": "^0.4.5",
-    "grunt-browserify": "^3.2.0",
-    "grunt-react": "^0.10.0",
     "object-assign": "^2.0.0",
-    "react": "*",
-    "react-tools": "*"
-  },
-  "jest": {
-    "scriptPreprocessor": "lib/preprocessor.js",
-    "unmockedModulePathPatterns": [
-      "node_modules/react"
-    ]
+    "react": "*"
   },
   "devDependencies": {
-    "jest-cli": "^0.1.18"
+    "browserify": "^6.2.0",
+    "envify": "^3.2.0",
+    "jest-cli": "^0.2.1",
+    "reactify": "^0.17.1"
+  },
+  "scripts": {
+    "build": "browserify . > dist/app.js",
+    "test": "jest"
+  },
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  },
+  "jest": {
+    "rootDir": "./src"
   }
 }

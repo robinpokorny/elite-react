@@ -6,6 +6,10 @@ var CHANGE_EVENT = 'change';
 
 var _elite = [];
 
+/**
+ * Add a company
+ * @param {object} company
+ */
 function create(company) {
   _elite.push(company);
 }
