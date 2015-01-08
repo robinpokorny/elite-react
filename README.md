@@ -3,6 +3,7 @@ Elite in React (POC)
 
 ## Usage
 
+*   Develop
 *  `npm install`
-*  `grunt`
+*  `npm run build`
 *   Open `index.html`
